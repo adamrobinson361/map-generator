@@ -36,7 +36,7 @@ shinyUI(fluidPage(
         label = "Select plot variable",
         choices = NULL
       ),
-      actionButton('generate map', 'Generate Map')
+      actionButton('generate_map', 'Generate Map')
     ),
     
     # Show a plot of the generated distribution

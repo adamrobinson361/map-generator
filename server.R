@@ -36,11 +36,17 @@ shinyServer(function(input, output, session) {
     df()
   })
   
-  output$map <- renderPlot({
+  observeEvent(input$generate_map, {
     
-    req(input$file1)
+    req(input$la_code_input)
     
-    lad_map()
+    req(input$plot_var_input)
+    
+    output$map <- renderPlot({
+      
+      lad_map(df(), input$la_code_input, input$plot_var_input)
+      
+    })
     
   })
   
