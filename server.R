@@ -28,13 +28,6 @@ shinyServer(function(input, output, session) {
     read_csv(input$file1$datapath)
     
   })
-
-  output$contents <- renderTable({
-    
-    req(input$file1)
-    
-    df()
-  })
   
   observeEvent(input$generate_map, {
     
